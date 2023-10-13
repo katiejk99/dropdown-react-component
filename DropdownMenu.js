@@ -78,9 +78,11 @@ function DropdownMenu({ options, multiSelect }) {
       />
       {isOpen && (
         <div className="dropdown-content">
-          <button className="select-button" onClick={toggleSelectAll}>
-            {selectAllMode ? 'Select All' : 'Deselect All'}
-          </button>
+          {multiSelect && (
+            <button className="select-button" onClick={toggleSelectAll}>
+              {selectAllMode ? 'Select All' : 'Deselect All'}
+            </button>
+          )}
           <ul>
             {getHighlightedOptions().map((option) => (
               <li
