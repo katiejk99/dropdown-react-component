@@ -1,0 +1,77 @@
+
+/* Dropdown Button */
+.dropdown button {
+  background-color: #30a4fc;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown Content (hidden by default) */
+.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Show the dropdown when the button is clicked */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dropdown Options */
+.dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown li {
+  padding: 5px;
+}
+
+/* Checkbox/Radio Button Styles */
+.dropdown input[type="checkbox"],
+.dropdown input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Selected Option Styles */
+.dropdown label {
+  display: block;
+}
+
+/* Select/Deselect All Buttons */
+.dropdown .select-deselect-buttons button {
+  margin: 5px;
+}
+
+/* Highlight selected options */
+.dropdown input:checked + label {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px;
+}
+
+/* Selected All Options */
+.dropdown input:checked + label::before {
+  content: '\2713';
+  font-size: 14px;
+  float: right;
+}
+
+/* Highlighted Options */
+.highlighted {
+  background-color: #8accff;
+}
+
+/* Style the input */
+.dropdown-input input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
