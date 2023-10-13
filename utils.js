@@ -1,22 +1,17 @@
-export function createOptionsList(externalList) {
+export function prettifyList(inputList) {
   // Check if the input is an array
-  if (!Array.isArray(externalList)) {
+  if (!Array.isArray(inputList)) {
     return [];
   }
 
-  // Convert the elements of the external list to options
-  const optionsList = externalList.map((item) => {
-    // Split the item into words, capitalize each word, and join them back
-    const name = item
-      .split(' ')
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
-
-    return {
-      name, // Use the item as the option name
-      // You can add additional properties if needed, e.g., id, value, etc.
-    };
+  // Capitalize the first letter of each word and trim trailing spaces
+  const prettifiedList = inputList.map((item) => {
+    const words = item.split(' ');
+    const capitalizedWords = words.map((word) => {
+      return word.charAt(0).toUpperCase() + word.slice(1).trim();
+    });
+    return capitalizedWords.join(' ');
   });
 
-  return optionsList;
+  return prettifiedList;
 }
