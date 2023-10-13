@@ -1,8 +1,10 @@
 import React from 'react';
 import DropdownMenu from './DropdownMenu';
+import createOptionsList from "./utils"
 
 function App() {
-  const options = ['Option 1', 'Option 2', 'Option 3'];
+  const inputOptions = ['Option 1', 'Option 2', 'Option 3'];
+  const options = createOptionsList(inputOptions); 
 
   return (
     <div className="App">
