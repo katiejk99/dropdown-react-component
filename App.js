@@ -1,6 +1,6 @@
 import React from 'react';
 import DropdownMenu from './DropdownMenu';
-import createOptionsList from "./utils"
+import {createOptionsList} from "./utils"
 
 function App() {
   const inputOptions = ['Option 1', 'Option 2', 'Option 3'];
@@ -15,7 +15,7 @@ function App() {
       </div>
       <div>
         <h3>Single Select</h3>
-        <DropdownMenu options={options} multiSelect={false}/>
+        <DropdownMenu options={options} multiSelect={false} />
       </div>
     </div>
   );

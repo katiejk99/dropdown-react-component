@@ -1,4 +1,4 @@
-function createOptionsList(externalList) {
+export function createOptionsList(externalList) {
   // Check if the input is an array
   if (!Array.isArray(externalList)) {
     return [];
